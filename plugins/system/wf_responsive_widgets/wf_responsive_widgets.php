@@ -122,6 +122,10 @@ class PlgSystemWf_responsive_widgets extends JPlugin
 
         $class = 'wf-responsive-container';
 
+        if (!empty($attribs['class'])) {
+            $class .= ' '.$attribs['class'];
+        }
+        
         if ($this->params->get('full_width_display', 0) == 1) {
             $class .= ' wf-responsive-container-full';
         }
